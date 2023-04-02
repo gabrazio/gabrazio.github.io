@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+    <head>
+        <title>Gabrazio</title>
+        <meta charset="UTF-8">
+
+        <style>
+            body, html {
+                padding: 0;
+                margin: 0;
+                border: 0;
+                font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                width: initial;
+                background-color: #0CC;
+                cursor: url("SmoothArrow.cur"), default;
+            }
+            
+            header {
+                text-align: center;
+                text-transform: uppercase;
+                width: 100%;
+                background-color: #00A;
+                color: white;
+                border-bottom: 0.2rem solid black;
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 5rem;
+            }
+            
+            footer {
+                background-color: #00A;
+                display: block;
+                border-top: 0.2rem solid black;
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                color: white;
+                text-align: center;
+                text-transform: uppercase;
+                width: 100%;
+                height: fit-content;
+                margin: 0;
+                padding: 0.5rem;
+            }
+            
+            .main {
+                padding: 8rem 2.5rem;
+                display: block;
+                word-break: break-all;
+                max-width: 100%;
+            }
+
+            .content {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                border-radius: 1rem;
+                background-color: #EE0;
+                border: 0.2rem solid black;
+                margin: 2.5rem 0rem;
+            }
+
+            .content .title {
+                padding: 0;
+                margin-top: 0.5rem;
+                margin-bottom: 0.5rem;
+                border: 0;
+                text-transform: uppercase;
+            }
+            
+            .content .line {
+                margin: 0;
+                padding: 0;
+            }
+            
+            .content .text {
+                margin: 0.5rem 0rem;
+                padding: 0;
+                border: 0;
+            }
+
+            .social {
+                width: 2em;
+            }
+            
+            footer span {
+                display: block;
+            }
+            
+            header h1 a {
+                color: white;
+                text-decoration: none;
+            }
+
+            a:hover {
+                cursor: url("SmoothHand.cur"), pointer;
+            }
+
+        </style>
+
+    </head>
+    <body>
+        <header>
+            <h1><a href="#main">Gabrazio</a></h1>
+        </header>
+        <div class="main" id="main">
+            <div class="content">
+                <h2 class="title">👋 Benvenuto</h2>
+                <hr class="line" color="black">
+                <p class="text">
+                    Ciao utente, benvenuto nel mio sito Internet io sono Gabrazio! :)
+                </p>
+            </div>
+            <div class="content">
+                <h2 class="title">📰 Notizie</h2>
+                <hr class="line" color="black">
+                <p class="text">
+                    Di seguito sono riportarte tutte le notizie:
+                </p>
+            </div>
+        </div>
+        <footer>
+            <span>Made by Gabrazio</span>
+        </footer>
+    </body>
+</html>
