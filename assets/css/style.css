@@ -28,7 +28,6 @@ header {
 }
 
 header {
-    flex: 1;
     text-align: center;
     margin: 0;
     padding: 0;
@@ -51,7 +50,6 @@ header h1#title {
 
 section {
     display: flex;
-    order: 2;
     padding: 2vw;
     margin: 0;
     background: #A9ABF5;
@@ -62,9 +60,10 @@ section {
 }
 
 section .link {
+    display: inline-block;
+    align-self: center;
     text-align: center;
     width: 7em;
-    display: inline-block;
     font-size: 6vw;
     text-transform: uppercase;
     border: 0.1em solid black;
@@ -91,14 +90,9 @@ section .link {
     }
 }
 
-section .link:hover {
-    animation-name: hover-button;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
 section a {
     color: black;
+    text-decoration: none;
 }
 
 section a:visited {
@@ -110,9 +104,14 @@ section a:hover {
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur84.cur), auto !important;
 }
 
+section .link:hover {
+    animation-name: hover-button;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
 footer {
     display: flex;
-    flex: 3;
     color: white;
     background: blue;
     margin: 0;
