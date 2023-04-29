@@ -74,25 +74,11 @@ section .link {
     box-shadow: 0.1em 0.1em;
 }
 
-@keyframes hover-button {
-    from {
-        background: white;
-    }
-
-    50% {
-        background: rgb(255, 128, 0);
-        color: yellow;
-    }
-
-    to {
-        background: yellow;
-        color: red;
-    }
-}
-
 section a {
+    display: inline-block;
     color: black;
     text-decoration: none;
+    width: 100%;
 }
 
 section a:visited {
@@ -104,7 +90,46 @@ section a:hover {
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur84.cur), auto !important;
 }
 
+@keyframes hover-button-background {
+    from {
+        background: white;
+    }
 
+    50% {
+        background: rgb(255, 128, 0);
+    }
+
+    to {
+        background: yellow;
+    }
+}
+
+
+@keyframes hover-button-color {
+    from {
+        color: black;
+    }
+
+    50% {
+        color: yellow;
+    }
+
+    to {
+        color: red;
+    }
+}
+
+section .link:hover {
+    animation-name: hover-button-background;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+section .link:hover > a {
+    animation-name: hover-button-color;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
 
 footer {
     display: flex;
