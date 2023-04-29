@@ -104,11 +104,7 @@ section a:hover {
     cursor: url(https://cur.cursors-4u.net/cursors/cur-1/cur84.cur), auto !important;
 }
 
-section .link:hover {
-    animation-name: hover-button;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+
 
 footer {
     display: flex;
