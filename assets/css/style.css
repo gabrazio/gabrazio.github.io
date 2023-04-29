@@ -22,7 +22,7 @@ html::-webkit-scrollbar-thumb {
     background: red;
 }
 
-head {
+header {
     display: flex;
     flex-wrap: wrap;
 }
