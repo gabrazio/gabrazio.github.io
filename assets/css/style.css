@@ -45,6 +45,7 @@ header h1#title {
     border-top: 2vw solid black;
     border-bottom: 2vw solid black;
     width: fit-content;
+    width: -moz-fit-content;
     background: white;
 }
 
