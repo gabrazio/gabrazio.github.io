@@ -12,14 +12,40 @@ img {
 }
 
 header {
+    padding: 0;
+    margin: 0;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     top: 0;
     left: 0;
     background: white;
     height: 5rem;
-    position: fixed;
-    display: inline-block;
     width: 100%;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     user-select: none;
+}
+
+@keyframes hide {
+    0% {height: 5rem; font-size: initial;}
+    100% {height: 0rem; display: none; font-size: 0;}
+}
+
+.hide-header {
+    animation-name: hide;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes show {
+    0% {height: 0; font-size: 0;}
+    100% {height: 5rem; font-size: initial; display: inline-block;}
+}
+
+.show-header {
+    animation-name: show;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }
