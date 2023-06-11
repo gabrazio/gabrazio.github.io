@@ -33,10 +33,8 @@ window.onload = () => {
         oldScroll = actualScroll;
 
         if (($(window).scrollTop()) > ($(document).height() / 2)) {
-            try {
-                pageNumber++;
-                httpRequest(pageNumber, 100);
-            } catch (e) {}
+            pageNumber++;
+            httpRequest(pageNumber, 100);
         }
     });
 }
