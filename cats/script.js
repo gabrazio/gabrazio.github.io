@@ -4,36 +4,39 @@ window.onload = () => {
     var actualScroll = 0;
     var oldScroll = 0;
 
-    function httpRequest(number, limit){
+    function httpRequest(number, limit) {
         let url = 'https://api.thecatapi.com/v1/images/search?limit=' + limit + '&page=' + number + '&api_key=live_tVsqwwsPPdgBurscYsbyIYVW1bKzMti9drm9cKp2jmhirNd7El0BL8ykdzSZBPd0';
         fetch(url).then((res) => {
             return res.json();
         }).then((data) => {
-            for(let i in data){
-            const img = document.createElement("img");
-            img.setAttribute("src", String(data[i].url));
-            img.setAttribute("width", "100%");
-            document.body.appendChild(img);
-        }}).catch((res) => {});
+            for (let i in data) {
+                const img = document.createElement("img");
+                img.setAttribute("src", String(data[i].url));
+                img.setAttribute("width", "100%");
+                document.body.appendChild(img);
+            }
+        }).catch((res) => {});
     }
 
     httpRequest(pageNumber, 10);
 
     window.addEventListener('scroll', (event) => {
         actualScroll = $(window).scrollTop();
-        
-        if(actualScroll > oldScroll){
+
+        if (actualScroll > oldScroll) {
             header.className = "hide-header";
-            
+
         } else {
             header.className = "show-header";
         }
 
         oldScroll = actualScroll;
 
-        if(($(window).scrollTop()) > ($(document).height() / 2)){
-            pageNumber++;
-            httpRequest(pageNumber, 100);
+        if (($(window).scrollTop()) > ($(document).height() / 2)) {
+            try {
+                pageNumber++;
+                httpRequest(pageNumber, 100);
+            } catch (e) {}
         }
-    });              
+    });
 }
