@@ -18,7 +18,11 @@ window.onload = () => {
         }).catch((res) => {});
     }
 
-    httpRequest(pageNumber, 10);
+    try{
+        httpRequest(pageNumber, 10);
+    } catch(e){
+        alert("ERROR: 404! >:'3")
+    }
 
     window.addEventListener('scroll', (event) => {
         actualScroll = $(window).scrollTop();
