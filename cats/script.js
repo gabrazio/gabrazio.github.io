@@ -21,13 +21,7 @@ window.onload = () => {
             }
         }).catch((error) => {
             if(firstRequest == true){
-                const err_box = document.createElement("div");
-                err_box.className = "error";
-                const err_msg = document.createElement("span");
-                err_msg.innerHTML = "ERROR: 404 >:'3";
-                err_box.appendChild(err_msg);
-                document.body.appendChild(err_box);
-                stopRequest = true;
+                location.reload(true);
             }
         });
         onRequest = false;
@@ -36,7 +30,7 @@ window.onload = () => {
 
     httpRequest(pageNumber, 10);
     firstRequest = false;
-    
+
     if(stopRequest == false){
         window.addEventListener('scroll', (event) => {
             actualScroll = $(window).scrollTop();
