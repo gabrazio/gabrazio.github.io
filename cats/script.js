@@ -18,16 +18,22 @@ window.onload = () => {
                 img.setAttribute("width", "100%");
                 document.body.appendChild(img);
             }
-        }).catch((res) => {});
+        }).catch((error) => {
+            if(firstRequest == true){
+                const err_box = document.createElement("div");
+                err_box.className = "error";
+                const err_msg = document.createElement("span");
+                err_msg.innerHTML = "ERROR: 404 >:'3";
+                err_box.appendChild(err_msg);
+                document.body.appendChild(err_box);
+            }
+        });
         onRequest = false;
         halfScroll = false;
     }
 
-    try{
-        httpRequest(pageNumber, 10);
-    } catch(error){
-        console.error("ERROR: " + error);
-    }
+    httpRequest(pageNumber, 10);
+    firstRequest = false;
 
     window.addEventListener('scroll', (event) => {
         actualScroll = $(window).scrollTop();

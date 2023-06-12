@@ -49,3 +49,13 @@ header {
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
 }
+
+.error {
+    background: white;
+    color: red;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+    height: 100%;
+}
