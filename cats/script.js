@@ -3,10 +3,13 @@ window.onload = () => {
     var pageNumber = 0;
     var actualScroll = 0;
     var oldScroll = 0;
+    var halfScroll = false;
+    var onRequest = false;
 
     function httpRequest(number, limit) {
         let url = 'https://api.thecatapi.com/v1/images/search?limit=' + limit + '&page=' + number + '&api_key=live_tVsqwwsPPdgBurscYsbyIYVW1bKzMti9drm9cKp2jmhirNd7El0BL8ykdzSZBPd0';
         fetch(url).then((res) => {
+            console.log("RICHIESTA INVIATA!");
             return res.json();
         }).then((data) => {
             for (let i in data) {
@@ -16,12 +19,14 @@ window.onload = () => {
                 document.body.appendChild(img);
             }
         }).catch((res) => {});
+        onRequest = false;
+        halfScroll = false;
     }
 
     try{
         httpRequest(pageNumber, 10);
-    } catch(e){
-        alert("ERROR: 404! >:'3")
+    } catch(error){
+        console.error("ERROR: " + error);
     }
 
     window.addEventListener('scroll', (event) => {
@@ -32,11 +37,16 @@ window.onload = () => {
 
         } else {
             header.className = "show-header";
+            halfScroll = false;
         }
 
         oldScroll = actualScroll;
 
         if (($(window).scrollTop()) > ($(document).height() / 2)) {
+            halfScroll = true;
+        }
+
+        if ((halfScroll == true) && onRequest == false){
             pageNumber++;
             httpRequest(pageNumber, 100);
         }
