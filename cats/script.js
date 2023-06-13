@@ -40,8 +40,8 @@ window.onload = () => {
     }
 
     httpRequest(pageNumber, 10);
-    httpRequest(pageNumber++, 100);
     firstRequest = false;
+    httpRequest(pageNumber++, 100);
 
     window.addEventListener('scroll', (event) => {
         actualScroll = $(window).scrollTop();
