@@ -11,11 +11,12 @@ window.onload = () => {
     }, 5000)
 
     async function httpRequest(number, limit) {
-        // Elemento caricamento
-        const loading = document.createElement("div");
-        document.body.appendChild(loading);
-        loading.className = "loading";
-        loading.innerHTML = "LOADING MORE CATS...";
+        if(firstRequest == false){
+            const loading = document.createElement("div");
+            document.body.appendChild(loading);
+            loading.className = "loading";
+            loading.innerHTML = "LOADING MORE CATS...";
+        }
 
         onRequest = true;
         let url = 'https://api.thecatapi.com/v1/images/search?limit=' + limit + '&page=' + number + '&api_key=live_tVsqwwsPPdgBurscYsbyIYVW1bKzMti9drm9cKp2jmhirNd7El0BL8ykdzSZBPd0';
@@ -33,7 +34,9 @@ window.onload = () => {
                 location.reload(true);
             }
         });
-        loading.remove();
+        if(firstRequest == false){
+            loading.remove();
+        }
     }
 
     httpRequest(pageNumber, 10);
