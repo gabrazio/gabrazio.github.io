@@ -3,6 +3,15 @@
     src: url("LilitaOne-Regular.ttf");
 }
 
+.loading {
+    user-select: none;
+    display: inline-block;
+    font-family: LilitaOne-Regular;
+    width: 100%;
+    height: 1rem;
+    padding: 0.5rem;
+}
+
 body, html {
     overflow-x: hidden;
     margin: 0;
