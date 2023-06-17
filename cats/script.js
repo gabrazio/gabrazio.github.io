@@ -1,4 +1,20 @@
 window.onload = () => {
+    async function getPrewiew(){
+        let url = 'https://api.thecatapi.com/v1/images/search?limit=1' + '&page=' + number + '&api_key=live_tVsqwwsPPdgBurscYsbyIYVW1bKzMti9drm9cKp2jmhirNd7El0BL8ykdzSZBPd0';
+        await fetch(url).then((res) => {
+            return res.json();
+        }).then((data) => {
+            url = String(data[i].url);
+        }).catch((error) => {
+            location.reload(true);
+        });
+        document.head.innerHTML += "<meta property=\"og:image\" content="+ url + ">";
+    }
+
+    getPrewiew();
+
+    <link rel="icon" type="image/x-icon" href="icon.jpg"></link>
+
     var header = document.getElementById("title");
     var pageNumber = 0;
     var actualScroll = 0;
