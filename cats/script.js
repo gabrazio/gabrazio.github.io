@@ -8,7 +8,7 @@ window.onload = () => {
         }).catch((error) => {
             location.reload(true);
         });
-        document.head.innerHTML += "<meta property=\"og:image\" content="+ url + ">";
+        document.head.innerHTML += "<meta property=\"og:image\" content=\"" + url + "\">";
     }
 
     getPrewiew();
