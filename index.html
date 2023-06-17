@@ -5,8 +5,7 @@
         <meta name="author" content="Gabrazio">
         <meta name="description" content="In questa pagina troverai tutti i miei collegamenti.">
         <meta name="keywords" content="Gabriele, Orazio, Gabrazio">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="google-site-verification" content="Yoo7tO_1K-sUN9-9XjIKLQQA3FldDoNNSIrLTnfVLAw">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
         <link rel="stylesheet" href="assets/css/style.css">
         <link rel="shortcut icon" href="assets/icon/Gabrazio.png" type="image/png">
     </head>
@@ -15,15 +14,34 @@
             <h1 id="title" title="¯⁠\⁠_⁠(⁠ツ⁠)⁠_⁠/⁠¯">Gabrazio</h1>
         </header>
         <section>
-            <div class="link" title="Instagram"><a href="https://www.instagram.com/gabrazio/">Instagram</a></div>
-            <div class="link" title="Telegram"><a href="https://t.me/Gabrazio">Telegram</a></div>
+            <div class="link" title="Instagram"><a>Instagram</a></div>
+            <div class="link" title="Telegram"><a>Telegram</a></div>
             <!--<div class="link" title="Twitter"><a href="https://twitter.com/Gabrazio">Twitter</a></div>
             <div class="link" title="Reddit"><a href="https://www.reddit.com/user/gabrazio">Reddit</a></div>
             <div class="link" title="Steam"><a href="https://steamcommunity.com/id/Gabrazio/">Steam</a></div>-->
-            <div class="link" title="Infinity Cats"><a href="https://gabrazio.github.io/cats/">Infinity Cats</a></div>
+            <div class="link" title="Infinity Cats"><a>Infinity Cats</a></div>
         </section>
         <footer>
             <h2>© 2023 Gabrazio. All rights reserved.</h2>
         </footer>
+        <script>
+            window.onload = () => {
+                const buttonInstagram = document.querySelector("[title=\"Instagram\"]");
+                const buttonTelegram = document.querySelector("[title=\"Telegram\"]");
+                const buttonInfinityCats = document.querySelector("[title=\"Infinity Cats\"]");
+                
+                buttonInstagram.addEventListener("click", () => {
+                    window.open("https://www.instagram.com/gabrazio/");
+                });
+
+                buttonTelegram.addEventListener("click", () => {
+                    window.open("https://t.me/Gabrazio");
+                });
+
+                buttonInfinityCats.addEventListener("click", () => {
+                    window.open("https://gabrazio.github.io/cats/");
+                });
+            }
+        </script>
     </body>
 </html>
