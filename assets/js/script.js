@@ -149,7 +149,7 @@ window.onload = () => {
     }
 
     function clickInstagram() {
-        audio.play()
+        new Audio('assets/audio/click.mp3').play();
         if(window.confirm('Do you want to leave this page?')){
             window.open("https://www.instagram.com/gabrazio/", "_self");
         }
