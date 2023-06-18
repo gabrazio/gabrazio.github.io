@@ -131,8 +131,6 @@ footer {
 }
 
 @media (min-width: 769px) {
-    
-
     #singleplayer {
         grid-area: singleplayer;
     }
