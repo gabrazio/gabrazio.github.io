@@ -2,25 +2,25 @@ body, html {
     padding: 0;
     margin: 0;
     user-select: none;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 @keyframes slide {
     0% {transform: translate(0px);}
-    100% {transform: translate(-1600px);}
+    100% {transform: translate(-1200px);}
 }
 
 .background {
     box-sizing: border-box;
     overflow: hidden;
-    filter: blur(0.5rem);
+    filter: blur(0.3rem);
     top: 0;
-    width: 4800px;
+    width: 3600px;
     height: 100%;
     position: absolute;
     z-index: -1;
-    background: url(../img/wallpaper.jpg) repeat-x;
-    background-size: 1600px 1800px;
+    background: url(../img/wp.webp) repeat-x;
+    background-size: 2400px;
     animation: slide 60s linear infinite;
 }
 
