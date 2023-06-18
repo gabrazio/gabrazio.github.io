@@ -145,8 +145,23 @@ footer {
 }
 
 @media (max-height: 300px) {
+    * {
+        display: none;
+    }
+
     html, body {
         background: url(../img/background.webp);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        width: 100%;
+        height: 100%;
+    }
+
+    body::after {
+        font-family: Minecraft;
+        content: "Internal Exception: java.io.IOException: For a better experience rotate your device!";
     }
 
     .background {
