@@ -172,6 +172,10 @@ footer {
 }
 
 @media (min-width: 769px) {
+    #title {
+        width: calc(1rem + 60vw);
+    }
+    
     #singleplayer {
         grid-area: singleplayer;
     }
