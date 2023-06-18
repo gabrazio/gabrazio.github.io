@@ -5,6 +5,7 @@ window.onload = () => {
     var windowClicked = false;
     const music = [];
     var texts = ["Hello World!", "AaAaaAaH!!!", "Drink some water! ;)", "WhaAaT?! D:", "Welcome!! :)"];
+    document.getElementById("text").innerHTML = String(texts[Math.floor(Math.random()*texts.length)]);
 
     // Audio
     const audio = new Audio('assets/audio/click.mp3');
@@ -17,14 +18,13 @@ window.onload = () => {
     const options = document.getElementById("options");
     const quit = document.getElementById("quit");
 
+
     window.addEventListener("click", () => {
         if(windowClicked == false){
             windowClicked = true;
             music[Math.floor(Math.random()*music.length)].play();
         }
     });
-
-    document.getElementById("text").innerHTML = String(texts[Math.floor(Math.random()*texts.length)]);
 
     singleplayer.addEventListener("click", () => {
         audio.play();

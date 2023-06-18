@@ -144,6 +144,18 @@ footer {
     transform-origin: center;
 }
 
+@media (max-height: 300px) {
+    html, body {
+        background: url(../img/background.webp);
+    }
+
+    .background {
+        background-image: none;
+        filter: none;
+        animation: none;
+    }
+}
+
 @media (min-width: 769px) {
     #singleplayer {
         grid-area: singleplayer;
