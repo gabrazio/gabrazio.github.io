@@ -67,7 +67,7 @@ window.onload = () => {
     quit.addEventListener("click", () => {
         audio.play();
         if(window.confirm('Do you want to leave this page?')){
-                window.open(location, "_self").close();
+                window.open('', "_self").close();
         }
     });
 }

@@ -57,8 +57,8 @@ header {
         "multiplayer"
         "options"
         "quit";
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
 }
 
 #singleplayer {
@@ -109,14 +109,14 @@ footer {
 }
 
 @keyframes text-animation {
-    0% {font-size: 3.5vw;}
-    50% {font-size: 3.2vw;}
-    100% {font-size: 3.5vw;}
+    0% {font-size: 4.4vw;}
+    50% {font-size: 4.2vw;}
+    100% {font-size: 4.4vw;}
 }
 
 #text {
     position: absolute;
-    width: 20vw;
+    width: 27vw;
     user-select: none;
     text-align: center;
     top: 16vw;
@@ -170,6 +170,12 @@ footer {
         margin-bottom: 5%;
         align-self: center;
         justify-self: center;
+    }
+
+    @keyframes text-animation {
+        0% {font-size: 3.5vw;}
+        50% {font-size: 3.2vw;}
+        100% {font-size: 3.5vw;}
     }
 
     #text {
