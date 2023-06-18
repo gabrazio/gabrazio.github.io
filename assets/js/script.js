@@ -14,7 +14,6 @@ window.onload = () => {
     // DOM Elements
     const singleplayer = document.getElementById("singleplayer");
     const mutiplayer = document.getElementById("multiplayer");
-    const steam = document.getElementById("steam");
     const options = document.getElementById("options");
     const quit = document.getElementById("quit");
 
@@ -38,13 +37,6 @@ window.onload = () => {
         audio.play();
         if(window.confirm('Do you want to leave this page?')){
             window.open("https://t.me/Gabrazio", "_self");
-        }
-    });
-
-    steam.addEventListener("click", () => {
-        audio.play();
-        if(window.confirm('Do you want to leave this page?')){
-            window.open("https://steamcommunity.com/id/Gabrazio", "_self");
         }
     });
 
