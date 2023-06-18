@@ -1,4 +1,6 @@
 window.onload = () => {
+    // @grant        window.close
+
     const music = [];
     music.push(new Audio('assets/audio/Moog City.mp3'));
     music.push(new Audio('assets/audio/Minecraft.mp3'));
@@ -63,7 +65,7 @@ window.onload = () => {
     quit.addEventListener("click", () => {
         audio.play();
         if(window.confirm('Do you want to leave this page?')){
-                window.open(location, "_self").close();
+                setTimeout(window.close, 1000);
         }
     });
 }
