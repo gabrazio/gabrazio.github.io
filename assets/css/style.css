@@ -1,166 +1,190 @@
-@font-face {
-    font-family: 'Roboto Condensed';
-    src: url(../fonts/RobotoCondensed-Regular.ttf);
-}
-
-* {
-    font-family: 'Roboto Condensed';
-}
-
-html, body {
-    margin: 0;
-    background: blue;
-    cursor: url(cursors/pointer.cur), auto !important;
-}
-
-html::-webkit-scrollbar {
-    background: white;
-    width: 0.5rem;
-}
-
-html::-webkit-scrollbar-thumb {
-    background: red;
-}
-
-header {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-header {
-    text-align: center;
-    margin: 0;
+body, html {
     padding: 0;
-    background: blue;
-    display: flex;
-    justify-content: center;
+    margin: 0;
+    user-select: none;
+    overflow: none;
+    background: url(../img/background.webp);
 }
 
-header h1#title {
-    flex: 1;
-    justify-content: center;
-    align-items: center;
-    font-size: 15vw;
-    text-transform: uppercase;
-    border-top: 2vw solid black;
-    border-bottom: 2vw solid black;
-    width: fit-content;
-    width: -moz-fit-content;
+@font-face {
+    font-family: Minecraft;
+    src: url(../font/MinecraftRegular-Bmg3.otf);
+}
+
+body::-webkit-scrollbar {
+    width: 0.5rem;
+    background: url(../img/download.png);
+}
+
+body::-webkit-scrollbar-thumb {
     background: white;
 }
 
-section {
-    display: flex;
-    padding: 2vw;
-    margin: 0;
-    background: #A9ABF5;
-    justify-content: center;
-    flex-wrap: wrap;
-    text-align: center;
-    flex-direction: column;
+#container {
+    height: 100%;
+    padding: 0;
 }
 
-section .link {
-    display: inline-block;
-    user-select: none;
-    align-self: center;
-    text-align: center;
-    width: 7em;
-    font-size: 6vw;
-    text-transform: uppercase;
-    border: 0.1em solid black;
-    border-radius: 1rem;
-    background-color: #EEEEEE;
-    padding: 1vw;
-    margin: 1vw;
-    box-shadow: 0.1em 0.1em;
-}
-
-section a {
-    display: inline-block;
-    color: black;
-    text-decoration: none;
+header {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
     width: 100%;
+    user-select: none;
 }
 
-section a:visited {
-    color: black;
-    text-decoration: none;
-}
-
-section a:hover {
-    cursor: url(cursors/pointer.cur), auto !important;
-}
-
-@keyframes hover-button-background {
-    from {
-        background: white;
-    }
-
-    50% {
-        background: rgb(255, 128, 0);
-    }
-
-    to {
-        background: yellow;
-    }
+#title {
+    width: calc(1rem + 70vw);
+    margin-top: 10%;
+    margin-bottom: 10%;
+    align-self: center;
+    justify-self: center;
 }
 
 
-@keyframes hover-button-color {
-    from {
-        color: black;
-    }
-
-    50% {
-        color: yellow;
-    }
-
-    to {
-        color: red;
-    }
+#buttons button:hover {
+    cursor: pointer;
+    background: url(../img/hover.png);
+    border-color: #BDC6FF #59639A #59639A #BDC6FF;
+    color: rgb(239, 245, 183);
 }
 
-section .link:hover {
-    animation-name: hover-button-background;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+#buttons {
+    display: grid;
+    grid-template-areas: 
+        "singleplayer"
+        "multiplayer"
+        "options"
+        "quit";
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
-section .link:hover > a {
-    animation-name: hover-button-color;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+#singleplayer {
+    grid-area: singleplayer;
+}
+
+#multiplayer {
+    grid-area: multiplayer;
+}
+
+#options {
+    grid-area: options;
+}
+
+#quit {
+    grid-area: quit;
+}
+
+#buttons button {
+    display: flex;
+    padding: 1rem;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(1rem + 1vw);
+    width: 100%;
+    height: 50%;
+    background: url(../img/download.png);
+    color: white;
+    border-color: #AAA #565656 #565656 #AAA;
+    border-top-color: rgb(170, 170, 170);
+    border-right-color: rgb(86, 86, 86);
+    border-bottom-color: rgb(86, 86, 86);
+    border-left-color: rgb(170, 170, 170);
+    text-shadow: 0.05rem 0.05rem #4C4C4C;
+    outline: 0.1rem solid #000;
+    font-family: Minecraft;
+}
+
+#container > * {
+    color: red;
 }
 
 footer {
-    display: flex;
     color: white;
-    background: blue;
-    margin: 0;
-    font-size: 3vw;
-    justify-content: center;
-    align-items: flex-end;
+    font-family: Minecraft;
+    font-size: calc(0.5+ 1vw);
+    padding-left: 1rem;
 }
 
-@media (min-width: 768px) {
-    header h1#title {
-        font-size: 7vw;
-        border-top: 1vw solid black;
-        border-bottom: 1vw solid black;
+@keyframes text-animation {
+    0% {font-size: 3.5vw;}
+    50% {font-size: 3.2vw;}
+    100% {font-size: 3.5vw;}
+}
+
+#text {
+    position: absolute;
+    width: 20vw;
+    user-select: none;
+    text-align: center;
+    top: 16vw;
+    right: 18.7vw;
+    rotate: -20deg;
+    color: yellow;
+    font-family: Minecraft;
+    animation-name: text-animation;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    transform-origin: center;
+}
+
+@media (min-width: 769px) {
+    
+
+    #singleplayer {
+        grid-area: singleplayer;
     }
     
-    section {
-        flex-direction: row;
+    #multiplayer {
+        grid-area: multiplayer;
+        margin-bottom: calc(0.5rem + 1vw);
     }
     
-    section .link {
-        width: auto;
-        font-size: 2.5vw;
-        border: 0.25vw solid black;
+    #options {
+        grid-area: options;
+    }
+    
+    #quit {
+        grid-area: quit-game;
     }
 
-    footer {
-        font-size: 1vw;
+    #buttons {
+        display: grid;
+        grid-template-columns: 1fr 0.1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-left: 20%;
+        margin-right: 20%;
+        grid-template-areas: 
+        "singleplayer singleplayer singleplayer"
+        "multiplayer multiplayer multiplayer"
+        "options . quit-game";
+    }
+
+    #title {
+        width: calc(1rem + 70vw);
+        margin-top: 5%;
+        margin-bottom: 5%;
+        align-self: center;
+        justify-self: center;
+    }
+
+    #text {
+        position: absolute;
+        width: 20vw;
+        user-select: none;
+        text-align: center;
+        top: 11vw;
+        right: 18.7vw;
+        rotate: -20deg;
+        color: yellow;
+        font-family: Minecraft;
+        animation-name: text-animation;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        transform-origin: center;
     }
 }
