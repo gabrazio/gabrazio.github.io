@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Combinatori</title>
+        <style>
+            body {
+                padding: 4rem;
+            }
+        </style>
+        <style>
+            div > p {
+                padding: 1rem;
+                border: 2px solid black;
+            }
+
+            p + div {
+                color: red;
+            }
+
+            p + p {
+                color: blue;
+            }
+
+            #ciao ~ div {
+                background: yellow;
+            }
+
+            span ~ b { /* Quindi fratelli che vengono dopo non vengono considerati... */
+                color: blue;
+                background: white;
+            }
+            </style>
+    </head>
+    <body>
+        <div>Primo</div>
+        <p id="ciao">Secondo</p>
+        <div>
+            <p>Terzo<span>Wee</span></p>
+        </div>
+        <div>
+            <b>Wewe 1</b>
+            <p>Quarto</p>
+            <span>Quinto</span>
+            <p>Sesto</p>
+            <b>Wewe 2</b>
+            <p>Settimo</p>
+        </div>
+    </body>
+</html>

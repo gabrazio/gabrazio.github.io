@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Position</title>
+        <style>
+            #padre {
+                border: 4px solid red;
+                min-width: 50px;
+                min-height: 50px;
+                padding-left: 0.3rem;
+            }
+
+            #figlio {
+                position: absolute; /* da notare che non ho usato alcun top, left etc...
+                    si posiziona praticamente nel punto (0,0) in alto a sinistra dentro il content
+                    inoltre viene anche considerato il padding (nota lo spazio a sinistra)
+                */
+                border: 1px solid black;
+                background: yellow;
+            }
+
+            #el {
+                margin-top: 2rem;
+                border: 4px solid blue;
+                min-height: 100px;
+            }
+
+            #sticky {
+                position: sticky;
+                top: 0px;
+                color: white;
+                background: red;
+            }
+
+            #sticky2 {
+                position: sticky;
+                border: 2px solid yellow;
+                color: white;
+                background: blueviolet;
+                top: 100px;
+            }
+
+            #paragrafo {
+                width: 100%;
+                overflow-wrap: break-word;
+            }
+
+            #fisso {
+                color: white;
+                background: coral;
+                border: 2px solid black;
+                position: fixed; /* appena ho messo fixed, la sua larghezza è collassata in auto */
+                bottom: 1rem;;
+                right: 1rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="padre">
+            <div id="figlio">
+                <span>Buonassserah!</span>
+            </div>
+            <div id="altro-figlio">
+                <span>Buongiornissssssssimoooh!</span>
+            </div>
+        </div>
+        <div id="el">
+            <div id="sticky">
+                <span>Contenuto Sticky! (dentro elemento)</span>
+            </div>
+            <p>CIAONE</p>
+        </div>
+        <div id="sticky2">
+            <span>Mi sposto ovunqueeee!!! Stickyyy!</span>
+        </div>
+        <div id="paragrafo">
+            <p>QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO QUESTO E' UN PARAGRAFO</p>
+        </div>
+        <div id="fisso">Sono fisso!</div>
+        <div style="display: inline-block; background: lime; border: 2px solid black; width: 100px; height: 100px;"></div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </body>
+</html>
