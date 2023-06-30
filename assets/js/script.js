@@ -27,7 +27,7 @@ window.onload = () => {
         const quit = document.createElement("button");
 
         singleplayer.textContent = "Social";
-        multiplayer.textContent = "Other";
+        multiplayer.textContent = "About";
         options.textContent = "Projects...";
         quit.textContent = "Quit";
 
