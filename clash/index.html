@@ -8,6 +8,7 @@
             fetch("https://api.clashroyale.com/v1/players/%23R9C0PQV", {
                 method : "GET",
                 headers : {
+                    'Access-Control-Allow-Origin': 'https://gabrazio.github.io/clash',
                     'Authorization': `Bearer ${token}`
                 }
             }).then((risposta) => {
