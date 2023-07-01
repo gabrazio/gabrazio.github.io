@@ -102,7 +102,7 @@ header {
     justify-content: center;
     font-size: calc(1rem + 1vw);
     width: 100%;
-    height: 50%;
+    height: calc(1rem + 2vw);
     background: url(../img/download.png);
     color: white;
     border-color: #AAA #565656 #565656 #AAA;
@@ -112,7 +112,12 @@ header {
     border-left-color: rgb(170, 170, 170);
     text-shadow: 0.05rem 0.05rem #4C4C4C;
     outline: 0.1rem solid #000;
+    margin-bottom: calc(0.5rem + 1vw);
     font-family: Minecraft;
+}
+
+.button-m {
+    margin-bottom: calc(0.5rem + 1vw);
 }
 
 footer {
@@ -171,26 +176,9 @@ footer {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
     #title {
         width: calc(1rem + 60vw);
-    }
-    
-    #singleplayer {
-        grid-area: singleplayer;
-    }
-    
-    #multiplayer {
-        grid-area: multiplayer;
-        margin-bottom: calc(0.5rem + 1vw);
-    }
-    
-    #options {
-        grid-area: options;
-    }
-    
-    #quit {
-        grid-area: quit-game;
     }
 
     #buttons {
@@ -206,6 +194,25 @@ footer {
         "multiplayer multiplayer multiplayer"
         "options . quit-game";
     }
+    
+    #singleplayer {
+        grid-area: singleplayer;
+        margin-bottom: calc(0.5rem + 1vw);
+    }
+    
+    #multiplayer {
+        grid-area: multiplayer;
+        margin-bottom: calc(1rem + 1vw);
+    }
+    
+    #options {
+        grid-area: options;
+    }
+    
+    #quit {
+        grid-area: quit-game;
+    }
+
 
     #title {
         width: calc(1rem + 70vw);

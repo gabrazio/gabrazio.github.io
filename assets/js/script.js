@@ -92,6 +92,11 @@ window.onload = () => {
         twitter.id = "twitter";
         back.id = "back";
 
+        instagram.className = "button-m";
+        telegram.className = "button-m";
+        twitter.className = "button-m";
+        back.className = "button-m";
+
         buttons.appendChild(instagram);
         buttons.appendChild(telegram);
         buttons.appendChild(twitter);
@@ -118,10 +123,7 @@ window.onload = () => {
         back.style.gridArea = "back";
 
         buttons.style.gridTemplateColumns = "1fr";
-        buttons.style.gridTemplateAreas = `"instagram"
-                                            "telegram"
-                                            "twitter"
-                                            "back"`;
+        buttons.style.gridTemplateAreas = "\"instagram\" \"telegram\" \"twitter\" \"back\"";
 
         document.getElementById("instagram").addEventListener("click", clickInstagram);
         document.getElementById("telegram").addEventListener("click", clickTelegram);
