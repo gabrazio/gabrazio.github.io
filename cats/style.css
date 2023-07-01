@@ -3,6 +3,12 @@
     src: url("LilitaOne-Regular.ttf");
 }
 
+@keyframes loading {
+    0% {content: "LOADING.";}
+    50% {content: "LOADING..";}
+    100% {content: "LOADING...";}
+}
+
 .loading {
     user-select: none;
     display: flex;
@@ -10,9 +16,17 @@
     justify-content: center;
     font-family: LilitaOne-Regular;
     width: 100%;
+    min-width: 100%;
     height: 1rem;
     padding: 0.5rem;
     text-align: center;
+}
+
+.loading::after {
+    content: "LOADING";
+    animation-name: loading;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
 }
 
 body, html {

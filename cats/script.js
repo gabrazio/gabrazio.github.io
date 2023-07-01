@@ -15,7 +15,6 @@ window.onload = () => {
         const loading = document.createElement("div");
         document.body.appendChild(loading);
         loading.className = "loading";
-        loading.innerHTML = "LOADING...";
         onLoading = true;
         return loading;
     }
