@@ -46,23 +46,11 @@ window.onload = () => {
         hideLoading(loading);
     }
 
-    httpRequest(pageNumber, 10);
+    httpRequest(pageNumber, 50);
     onRequest = false;
     firstRequest = false;
 
-    window.addEventListener('scroll', (event) => {
-        actualScroll = $(window).scrollTop();
-
-        if (actualScroll > oldScroll) {
-            header.className = "hide-header";
-
-        } else {
-            header.className = "show-header";
-            halfScroll = false;
-        }
-
-        oldScroll = actualScroll;
-        
+    window.addEventListener('scroll', (event) => {        
         if (($(window).scrollTop()) > ($(document).height() / 2) && (onRequest == false) && (onLoading == false)) {
             pageNumber++;
             httpRequest(pageNumber, 100);

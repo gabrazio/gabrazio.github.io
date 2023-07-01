@@ -5,11 +5,14 @@
 
 .loading {
     user-select: none;
-    display: inline-block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: LilitaOne-Regular;
     width: 100%;
     height: 1rem;
     padding: 0.5rem;
+    text-align: center;
 }
 
 body, html {
@@ -69,20 +72,10 @@ a:hover {
     color: black;
 }
 
-@keyframes hide {
-    0% {height: 5rem; font-size: initial;}
-    100% {height: 0rem; display: none; font-size: 0;}
-}
-
 .hide-header {
     animation-name: hide;
     animation-duration: 0.5s;
     animation-fill-mode: forwards;
-}
-
-@keyframes show {
-    0% {height: 0; font-size: 0;}
-    100% {height: 5rem; font-size: initial; display: inline-block;}
 }
 
 .show-header {
